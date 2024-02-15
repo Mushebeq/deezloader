@@ -115,9 +115,20 @@ def set_path(
 	song_metadata, output_dir,
 	song_quality, file_format, method_save
 ):
+	#ar_album = var_excape(song_metadata['ar_album'])
 	album = var_excape(song_metadata['album'])
+	#label = var_excape(song_metadata['label'])
+	#upc = var_excape(song_metadata['upc'])
+	#nb_tracks = var_excape(song_metadata['nb_tracks'])
 	artist = var_excape(song_metadata['artist'])
-	music = var_excape(song_metadata['music'])
+	tracknum = var_excape(song_metadata['tracknum'])
+	discnum = var_excape(song_metadata['discnum'])
+	#year = var_excape(song_metadata['year'])
+	#bpm = var_excape(song_metadata['bpm'])
+	#duration = var_excape(song_metadata['duration'])
+	isrc = var_excape(song_metadata['isrc'])
+	#gain = var_excape(song_metadata['gain'])
+	music = var_excape(song_metadata['music']))
 
 	if method_save == 0:
 		discnum = song_metadata['discnum']
@@ -135,6 +146,11 @@ def set_path(
 		discnum = song_metadata['discnum']
 		tracknum = song_metadata['tracknum']
 		song_name = f"{discnum}|{tracknum} - {music} - {artist}"
+#example
+	#elif method_save == 4:
+		#discnum = song_metadata['discnum']
+		#tracknum = song_metadata['tracknum']
+		#song_name = f"{tracknum}. {music}"
 
 	song_dir = __get_dir(song_metadata, output_dir, method_save)
 	__check_dir(song_dir)

@@ -50,11 +50,12 @@ class API:
 		return infos
 
 	@classmethod
-	def get_album(cls, ids):
-		url = f"{cls.__api_link}album/{ids}"
+	def get_album(cls, ids, limit=1000, offset=0):
+		url = f"{cls.__api_link}album/{ids}?limit={limit}&offset={offset}"
 		infos = cls.__get_api(url)
 
 		return infos
+
 
 	@classmethod
 	def get_playlist(cls, ids):
