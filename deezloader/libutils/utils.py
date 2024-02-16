@@ -121,11 +121,11 @@ def set_path(
 	#upc = var_excape(song_metadata['upc'])
 	#nb_tracks = var_excape(song_metadata['nb_tracks'])
 	artist = var_excape(song_metadata['artist'])
-	tracknum = var_excape(song_metadata['tracknum'])
-	discnum = var_excape(song_metadata['discnum'])
-	#year = var_excape(song_metadata['year'])
-	#bpm = var_excape(song_metadata['bpm'])
-	#duration = var_excape(song_metadata['duration'])
+	#tracknum = var_excape(song_metadata['tracknum']) #use this inside your method_save, also dont use varexcape for this
+	#discnum = var_excape(song_metadata['discnum']) #use this inside your method_save, also dont use varexcape for this
+	#year = var_excape(song_metadata['year']) #use this inside your method_save, also dont use varexcape for this
+	#bpm = var_excape(song_metadata['bpm']) #use this inside your method_save, also dont use varexcape for this
+	#duration = var_excape(song_metadata['duration']) #use this inside your method_save, also dont use varexcape for this
 	isrc = var_excape(song_metadata['isrc'])
 	#gain = var_excape(song_metadata['gain'])
 	music = var_excape(song_metadata['music'])
