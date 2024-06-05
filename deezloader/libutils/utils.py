@@ -68,12 +68,14 @@ def convert_to_date(date: str):
 	return date
 
 def what_kind(link):
-	url = request(link).url
+    if 'deezer.page.link' in link:
+        response = requests.get(link)
+        link = response.url  
 
-	if url.endswith("/"):
-		url = url[:-1]
+    if link.endswith("/"):
+        link = link[:-1]
 
-	return url
+    return link
 
 def __get_tronc(string):
 	l_encoded = len(
